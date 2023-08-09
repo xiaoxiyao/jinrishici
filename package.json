@@ -1,6 +1,6 @@
 {
-  "name": "@mengjx/jinrishici",
-  "version": "1.0.1",
+  "name": "jinrishici-ts",
+  "version": "1.0.2",
   "description": "获取今日诗词，更优雅的esm和ts类型支持",
   "keywords": [
     "jinrishici",
@@ -8,9 +8,9 @@
     "今日诗词",
     "诗词api"
   ],
-  "author": "GraciaMeng <1040616435@qq.com>",
+  "author": "xiyao.luoxiao@gmail.com",
   "license": "MIT",
-  "packageManager": "pnpm@7.8.0",
+  "packageManager": "pnpm@8.6.12",
   "type": "module",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -25,7 +25,7 @@
     "./*": "./*"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -33,14 +33,14 @@
     "publishPkg": "npm publish",
     "test_dev": "node ./examples/index.js"
   },
-  "homepage": "https://github.com/GraciaMeng/jinrishici#readme",
+  "homepage": "https://github.com/xiaoxiyao/jinrishici",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "repository": "https://github.com/GraciaMeng/jinrishici",
+  "repository": "https://github.com/xiaoxiyao/jinrishici",
   "bugs": {
-    "url": "https://github.com/GraciaMeng/jinrishici/issues"
+    "url": "https://github.com/xiaoxiyao/jinrishici/issues"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.5.0",
