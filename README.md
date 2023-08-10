@@ -8,7 +8,7 @@
 npm(yarn、pnpm) 安装后，引入本模块，调用 load 方法。
 
 ```javascript esm
-import { load } from '@mengjx/jinrishici'
+import { load } from 'jinrishici-ts'
 async function loadPoetry() {
 	const result = await load()
 	console.log(result);
