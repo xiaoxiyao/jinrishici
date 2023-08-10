@@ -1,6 +1,6 @@
 {
   "name": "jinrishici-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "获取今日诗词，更优雅的esm和ts类型支持",
   "keywords": [
     "jinrishici",
