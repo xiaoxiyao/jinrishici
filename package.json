@@ -30,7 +30,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "tsup src/*.ts --watch src",
-    "publishPkg": "npm publish",
+    "publishPkg": "npm run build && npm publish",
     "test_dev": "node ./examples/index.js"
   },
   "homepage": "https://github.com/xiaoxiyao/jinrishici",

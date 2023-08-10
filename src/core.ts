@@ -6,7 +6,7 @@ export function isWindow(): boolean {
   return typeof window !== 'undefined'
 }
 
-function corsLoad() {
+function corsLoad(): Promise<PoetryRequestData> {
   return sendRequest("https://v2.jinrishici.com/one.json?client=npm-sdk/1.0").then((result) => {
     if (isWindow()) {
       window.localStorage.setItem(STORAGE_TOKEN, result.token)
@@ -15,20 +15,15 @@ function corsLoad() {
   })
 }
 
-function commonLoad(token: string) {
+function commonLoad(token: string): Promise<PoetryRequestData> {
   return sendRequest("https://v2.jinrishici.com/one.json?client=npm-sdk/1.0&X-User-Token=" + encodeURIComponent(token))
 }
 
-function sendRequest(apiUrl: string) {
-  return new Promise<PoetryRequestData>((resolve, reject) => {
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => resolve(data))
-      .catch(error => {
-        console.error("[jinrishici] api loading failed，error reason is：" + error.errMessage)
-        reject(error as ErrorPoetryRequestData)
-      })
-  })
+function sendRequest(apiUrl: string): Promise<PoetryRequestData> {
+  return fetch(apiUrl).then(response => response.json()).catch((error: ErrorPoetryRequestData) => {
+    console.error("[jinrishici] api loading failed，error reason is：" + error.errMessage)
+    throw error;
+  });
 }
 
 export function load(): Promise<PoetryRequestData> {
