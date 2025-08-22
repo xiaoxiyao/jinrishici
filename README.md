@@ -1,3 +1,9 @@
+# jinrishici-ts
+
+[![NPM Package](https://img.shields.io/npm/v/jinrishici-ts)](https://www.npmjs.com/package/jinrishici-ts)
+[![NPM Downloads](https://img.shields.io/npm/dw/jinrishici-ts)](https://npmtrends.com/jinrishici-ts)
+
+
 今日诗词API 是一个可以免费调用的诗词接口：[https://www.jinrishici.com](https://www.jinrishici.com)
 
 该包是引入官方 SDK，通过esm、Typescript开发（支持类型推断）
